@@ -1,7 +1,7 @@
 import Landing from "@/components/Landing";
 import WorkerItem from "@/components/WorkerItem";
 import { fetchWorkers } from "@/utils/fetchWorkers";
-import {BsFacebook} from "react-icons/bs"
+
 
 
 type Props = {
@@ -37,7 +37,7 @@ const About = ({ workers }: Props) => {
 
 export default About;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const workers: Worker[] = await fetchWorkers();
   return {
     props: { workers },

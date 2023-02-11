@@ -6,3 +6,4 @@ export const fetchCategories = async () => {
   const categories: Category[] = data.categories;
   return categories;
 };
+ 

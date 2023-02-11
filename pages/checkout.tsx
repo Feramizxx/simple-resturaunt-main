@@ -1,4 +1,3 @@
-import Products from "@/components/Products";
 import { selectBasketItems } from "@/redux/basketSlice";
 import React, { useState, useEffect } from "react";
 import CheckoutProduct from "@/components/CheckoutProduct";

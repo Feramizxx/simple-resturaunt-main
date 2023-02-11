@@ -1,10 +1,7 @@
 import { urlFor } from "@/sanity";
-import { type } from "os";
 import React from "react";
 import Counter from "./Counter";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux/es/exports";
-import { selectBasketItems } from "@/redux/basketSlice";
+
 
 type Props = {
   product: Product;

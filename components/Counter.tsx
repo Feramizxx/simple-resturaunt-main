@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import {
   addToBasket,
   selectBasketItems,
-  selectBasketItemsWithId,
 } from "@/redux/basketSlice";
 import { useDispatch } from "react-redux";
 import { decreaseItemsCount } from "@/redux/basketSlice";
-import { spawn } from "node:child_process";
 import toast from "react-hot-toast"
-import { it } from "node:test";
 type Props = {
   product: Product;
   id: string;
