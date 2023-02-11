@@ -25,8 +25,6 @@ function Checkout() {
   const handleClick = () => {
     router.push(`/`, undefined, { scroll: false });
   };
-
-  console.log(items);
   return (
     <div className="flex flex-col   mx-auto">
       <Landing />

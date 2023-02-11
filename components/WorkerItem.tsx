@@ -7,7 +7,6 @@ type Props = {
   worker: Worker;
 };
 function WorkerItem({ worker }: Props) {
-  console.log(worker.title);
   return (
     <div>
       <div className="flex  justify-center">

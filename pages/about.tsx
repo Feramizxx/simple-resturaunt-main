@@ -8,7 +8,6 @@ type Props = {
   workers: Worker[];
 };
 const About = ({ workers }: Props) => {
-  console.log(workers);
   return (
     <div className="">
       <Landing />

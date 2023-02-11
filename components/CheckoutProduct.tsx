@@ -15,10 +15,7 @@ type Props = {
 function CheckoutProduct({ items, id }: Props) {
   const dispatch = useDispatch();
   const Items = useSelector(selectBasketItems);
-  console.log(items);
-
   const removeFromCartHandle = () => {
-    // dispatch(decreaseItemsCount());
     items.map((item) => {
       toast.error(`Removed ${item.title} from basket`);
 
