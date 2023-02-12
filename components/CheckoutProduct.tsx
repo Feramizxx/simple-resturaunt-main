@@ -40,7 +40,7 @@ function CheckoutProduct({ items, id }: Props) {
           <div className=" flex flex-col items-end space-y-5">
             <div className="flex flex-col sm:flex-row items-center justify-center ">
               <span className="font-bold  text-[18px] px-4">
-                Quantity: {items.map((item) => item.quantity)}
+                Quantity: {items ? items.map((item) => item.quantity): []}
               </span>
               <button
                 onClick={removeFromCartHandle}
@@ -50,7 +50,7 @@ function CheckoutProduct({ items, id }: Props) {
               </button>
             </div>
             <p className="text-[22px]">
-              Subtotal:{(items[0].price * items[0].quantity).toFixed(2)}$
+              Subtotal:{items? (items[0].price * items[0].quantity).toFixed(2): []}$
             </p>
           </div>
         </div>

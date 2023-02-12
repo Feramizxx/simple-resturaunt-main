@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 import Landing from "@/components/Landing";
 import { useRouter } from "next/router";
 
-function Checkout() {
+
+export default function Checkout() {  
   const router = useRouter();
   const items = useSelector(selectBasketItems);
-  const [total, setTotal] = useState(0);
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState(
     {} as { [key: string]: Product[] }
   );
@@ -71,4 +71,4 @@ function Checkout() {
   );
 }
 
-export default Checkout;
+

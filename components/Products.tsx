@@ -9,11 +9,11 @@ type Props = {
 function Products({ categories, products }: Props) {
   
   const showProduct = (category: number) => {
-    return products
+    return products ? products
       .filter((product) => product.category._ref === categories[category]._id)
       .map((product) => {
         return  <ProductItem quantity={0} key={product._id} product={product}  id={product._id} />;
-      });
+      }): [];
   };
   return (
     <div className="flex flex-col space-y-8 w-full items-center mt-16 pb-10  justify-center">
@@ -30,7 +30,7 @@ function Products({ categories, products }: Props) {
       <div className="">
         <Tab.Group>
           <Tab.List className="flex justify-center space-x-5 items-center">
-            {categories.map((category) => {
+            {categories ? categories.map((category) => {
               return (
                 <Tab
                   key={category._id}
@@ -39,7 +39,7 @@ function Products({ categories, products }: Props) {
                   {category.title}
                 </Tab>
               );
-            })}
+            }): []}
           </Tab.List>
           <Tab.Panels >
             <Tab.Panel className="tablePanel ">{showProduct(0)}</Tab.Panel>

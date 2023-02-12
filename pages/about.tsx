@@ -3,7 +3,6 @@ import WorkerItem from "@/components/WorkerItem";
 import { fetchWorkers } from "@/utils/fetchWorkers";
 import { GetStaticProps } from "next";
 
-
 type Props = {
   workers: Worker[];
 };
@@ -22,12 +21,14 @@ const About = ({ workers }: Props) => {
         </div>
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-10 items-center justify-center">
-          {workers.map((worker) => {
-            return <WorkerItem key={worker._id} worker={worker} />;
-          })}
+          {workers
+            ? workers.map((worker) => {
+                return <WorkerItem key={worker._id} worker={worker} />;
+              })
+            : []}
         </div>
       </div>
-      
+
       <div className="pb-6 text-center pt-20">
         Copyright © 2020 Simple House | Design: TemplateMo
       </div>
@@ -37,7 +38,7 @@ const About = ({ workers }: Props) => {
 
 export default About;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps = async () => {
   const workers: Worker[] = await fetchWorkers();
   return {
     props: { workers },

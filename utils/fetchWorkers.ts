@@ -1,3 +1,4 @@
+require("dotenv").config();
 export const fetchWorkers = async () => {
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getWorkers`

@@ -1,3 +1,4 @@
+require("dotenv").config();
 export const fetchProducts = async () => {
   const result = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProducts`

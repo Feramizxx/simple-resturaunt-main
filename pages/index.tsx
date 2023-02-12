@@ -8,10 +8,12 @@ import Basket from "@/components/Basket";
 import Footer from "@/components/Footer";
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
+
 type Props = {
   categories: Category[];
   products: Product[];
 };
+
 export function Home({ categories, products }: Props) {
   return (
     <>
@@ -31,7 +33,7 @@ export function Home({ categories, products }: Props) {
 export default dynamic(() => Promise.resolve(Home), {
   ssr: false,
 });
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps = async () => {
   const categories: Category[] = await fetchCategories();
   const products: Product[] = await fetchProducts();
 
