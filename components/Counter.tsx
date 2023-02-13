@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import {
   addToBasket,
   selectBasketItems,
-} from "@/redux/basketSlice";
+} from "../redux/basketSlice";
 import { useDispatch } from "react-redux";
-import { decreaseItemsCount } from "@/redux/basketSlice";
+import { decreaseItemsCount } from "../redux/basketSlice";
 import toast from "react-hot-toast"
 type Props = {
   product: Product;

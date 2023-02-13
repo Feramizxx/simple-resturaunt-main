@@ -1,4 +1,4 @@
-import { urlFor } from "@/sanity";
+import { urlFor } from "../sanity";
 import React from "react";
 import Counter from "./Counter";
 

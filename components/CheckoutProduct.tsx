@@ -1,11 +1,11 @@
-import { urlFor } from "@/sanity";
+import { urlFor } from "../sanity";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import {
   removeFromBasket,
   selectBasketItems,
-} from "@/redux/basketSlice";
+} from "../redux/basketSlice";
 type Props = {
   items: Product[];
   id: string;

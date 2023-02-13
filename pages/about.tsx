@@ -1,6 +1,6 @@
-import Landing from "@/components/Landing";
-import WorkerItem from "@/components/WorkerItem";
-import { fetchWorkers } from "@/utils/fetchWorkers";
+import Landing from "../components/Landing";
+import WorkerItem from "../components/WorkerItem";
+import { fetchWorkers } from "../utils/fetchWorkers";
 import { GetStaticProps } from "next";
 
 type Props = {
@@ -38,7 +38,7 @@ const About = ({ workers }: Props) => {
 
 export default About;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const workers: Worker[] = await fetchWorkers();
   return {
     props: { workers },

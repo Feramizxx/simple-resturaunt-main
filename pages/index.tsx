@@ -1,12 +1,12 @@
 import Head from "next/head";
 import React from "react";
 import Landing from "../components/Landing";
-import Products from "@/components/Products";
-import { fetchCategories } from "@/utils/fetchCategories";
-import { fetchProducts } from "@/utils/fetchProducts";
-import Basket from "@/components/Basket";
-import Footer from "@/components/Footer";
-import { GetStaticProps } from "next";
+import Products from "../components/Products";
+import { fetchCategories } from "../utils/fetchCategories";
+import { fetchProducts } from "../utils/fetchProducts";
+import Basket from "../components/Basket";
+import Footer from "../components/Footer";
+import { GetServerSideProps, GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 
 type Props = {
@@ -33,7 +33,7 @@ export function Home({ categories, products }: Props) {
 export default dynamic(() => Promise.resolve(Home), {
   ssr: false,
 });
-export const getStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const categories: Category[] = await fetchCategories();
   const products: Product[] = await fetchProducts();
 

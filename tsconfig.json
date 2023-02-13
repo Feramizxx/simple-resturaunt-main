@@ -13,12 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity-resturaunt/schemas/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "applestoreclone/tailwind.config.js"],
   "exclude": ["node_modules"]
 }

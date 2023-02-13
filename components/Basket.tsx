@@ -1,7 +1,7 @@
 import React from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { selectBasketItems } from "@/redux/basketSlice";
+import { selectBasketItems } from "../redux/basketSlice";
 import { useSelector } from "react-redux";
 
 function Basket() {

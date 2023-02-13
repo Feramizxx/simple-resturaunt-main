@@ -2,7 +2,7 @@ import React from "react";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import { selectBasketItems } from "@/redux/basketSlice";
+import { selectBasketItems } from "../redux/basketSlice";
 function Landing() {
   const items = useSelector(selectBasketItems);
   return (

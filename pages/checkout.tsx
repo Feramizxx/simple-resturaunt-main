@@ -1,8 +1,8 @@
-import { selectBasketItems } from "@/redux/basketSlice";
+import { selectBasketItems } from "../redux/basketSlice";
 import React, { useState, useEffect } from "react";
-import CheckoutProduct from "@/components/CheckoutProduct";
+import CheckoutProduct from "../components/CheckoutProduct";
 import { useSelector } from "react-redux";
-import Landing from "@/components/Landing";
+import Landing from "../components/Landing";
 import { useRouter } from "next/router";
 
 
@@ -37,7 +37,7 @@ export default function Checkout() {
                   onClick={handleClick}
                   className="text-white  rounded-lg bg-[#006400] px-8 py-4"
                 >
-                  Go Back To Shop
+                  Go Back To Shop 
                 </button>
               </div>
             )}
