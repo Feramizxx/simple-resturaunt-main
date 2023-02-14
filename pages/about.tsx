@@ -38,7 +38,7 @@ const About = ({ workers }: Props) => {
 
 export default About;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetStaticProps<Props> = async () => {
   const workers: Worker[] = await fetchWorkers();
   return {
     props: { workers },
