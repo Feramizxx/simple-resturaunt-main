@@ -1,4 +1,3 @@
-import React from "react";
 import { Tab } from "@headlessui/react";
 import ProductItem from "./ProductItem";
 
@@ -9,11 +8,11 @@ type Props = {
 function Products({ categories, products }: Props) {
   
   const showProduct = (category: number) => {
-    return products ? products
+    return  products
       .filter((product) => product.category._ref === categories[category]._id)
       .map((product) => {
         return  <ProductItem quantity={0} key={product._id} product={product}  id={product._id} />;
-      }): [];
+      });
   };
   return (
     <div className="flex flex-col space-y-8 w-full items-center mt-16 pb-10  justify-center">

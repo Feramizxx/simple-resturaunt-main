@@ -2,14 +2,16 @@
   "name": "sanity-resturaunt",
   "private": true,
   "version": "1.0.0",
-  "main": "package.json",
+  "main": "index.js",
   "license": "UNLICENSED",
+  
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "postinstall": "prisma generate"
   },
   "keywords": [
     "sanity"

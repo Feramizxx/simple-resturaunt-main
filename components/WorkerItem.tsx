@@ -1,5 +1,4 @@
 import { urlFor } from "../sanity";
-import React from "react";
 import {BsFacebook,BsTwitter,BsYoutube,BsInstagram} from "react-icons/bs"
 
 
